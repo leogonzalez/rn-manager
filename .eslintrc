@@ -1,3 +1,6 @@
 {
-"extends":["rallycoding", "prettier"]
+"extends":["rallycoding", "prettier"],
+"rules":{
+  "arrow-body-style":0
+  }
 }
