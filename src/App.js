@@ -1,18 +1,19 @@
 import React, { Component } from "react";
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import firebase from "firebase";
+import ReduxThunk from "redux-thunk";
 import reducers from "./reducers";
-import { config } from "./config/keys";
+import { keys } from "./config/keys";
 
-import LoginForm from './components/LoginForm'
+import LoginForm from "./components/LoginForm";
 
-const store = createStore(reducers);
+const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
 
 class App extends Component {
   componentWillMount() {
-    firebase.initializeApp(config);
+    firebase.initializeApp(keys);
   }
   render() {
     return (
