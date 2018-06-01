@@ -1,3 +1,1 @@
-import { keys } from "./dev";
-
-export { keys };
+export * from "./dev";
