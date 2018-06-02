@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-// import { View } from "react-native";
 import { Card, CardSection, Button } from "./common";
 import { employeeCreate } from "../actions";
 import EmployeeForm from "./EmployeeForm";
